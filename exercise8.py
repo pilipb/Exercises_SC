@@ -28,3 +28,16 @@ print(x)
 from scipy.optimize import root
 
 sol = root(f, x0)
+print(sol.x)
+
+# solve using bisect
+a = 0
+b = 1
+x = bisect(f, a, b, tol)
+print(x)
+
+# solve using secant
+x0 = 0
+x1 = 1
+x = secant(f, x0, x1, tol)
+print(x)
